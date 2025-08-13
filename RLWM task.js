@@ -1796,7 +1796,7 @@ function Thank_youRoutineBegin(snapshot) {
     //generate filename for results
     let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
     //extract data object from experiment
-    let data0bj = psychoJS._experiement._trialsData;
+    let dataObj = psychoJS._experiment._trialsData;
     
     //convert data object to csv
     let data = [Object.keys(dataObj[0])].concat(dataObj).map(it => {
@@ -1804,7 +1804,7 @@ function Thank_youRoutineBegin(snapshot) {
     }).join('\n')
     // send data to OSF via DataPipe
     console.log('Saving data ...');
-    fetch('https://pip,jspsych.org/api/data' , {
+    fetch('https://pip.jspsych.org/api/data' , {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json' ,
@@ -1924,3 +1924,4 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
