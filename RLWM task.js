@@ -1804,7 +1804,7 @@ function Thank_youRoutineBegin(snapshot) {
     }).join('\n')
     // send data to OSF via DataPipe
     console.log('Saving data ...');
-    fetch('https://pip.jspsych.org/api/data' , {
+    fetch('https://pipe.jspsych.org/api/data' , {
         method: 'POST',
         headers: {
             'Content-Type' : 'application/json' ,
@@ -1924,4 +1924,5 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
 
