@@ -1794,7 +1794,7 @@ function Thank_youRoutineBegin(snapshot) {
     // disable downloading results to browser
     psychoJS._saveResults = 0;
     //generate filename for results
-    let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.csv';
+    let filename = psychoJS._experiment._experimentName + '_' + psychoJS._experiment._datetime + '.xlsx';
     //extract data object from experiment
     let dataObj = psychoJS._experiment._trialsData;
     
@@ -1924,5 +1924,6 @@ async function quitPsychoJS(message, isCompleted) {
   
   return Scheduler.Event.QUIT;
 }
+
 
 
